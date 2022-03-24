@@ -72,7 +72,6 @@ class _TodoListPageState extends State<TodoListPage> {
                     ElevatedButton(
                       onPressed: () {
                         String text = todoController.text;
-
                         if (text.isEmpty) {
                           setState(() {
                             errorText = 'O titulo não pode ser vazio!';
@@ -81,6 +80,7 @@ class _TodoListPageState extends State<TodoListPage> {
                         }
 
                         setState(() {
+                          //faz a atualização da tela
                           Todo newTodo = Todo(
                             title: text,
                             dateTime: DateTime.now(),
